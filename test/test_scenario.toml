@@ -1,0 +1,10 @@
+# サンプル・サイズ  
+n = 5
+
+# パラメータの変化  
+parameter = [
+    # それぞれ変化点，平均，分散．変化点に並べる． 
+    {tau = 15, mu = {type = "Step", level = 0.0}, sigma2 = {type = "Step", level = 1.0}},
+    {tau = 30, mu = {type = "Linear", grad = 0.1}, sigma2 = {type = "Step", level = 2.0}},
+    {tau = 40, mu = {type = "Linear", grad = 0.15}, sigma2 = {type = "LinearAndStep", grad = 0.5, init = 2.5}}
+]
